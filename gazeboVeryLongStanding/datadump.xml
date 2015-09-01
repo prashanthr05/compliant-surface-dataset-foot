@@ -1,0 +1,133 @@
+<application>
+	<name>gazeboBackwardTipping</name>
+	<dependencies>
+		<port>/icubGazeboSim/right_leg/state:o</port>
+		<port>/icubGazeboSim/left_leg/state:o</port>
+		<port>/icubGazeboSim/torso/state:o</port>
+		<port>/icubGazeboSim/left_foot_IMU</port>
+		<port>/icubGazeboSim/right_foot_IMU</port>
+		<port>/icubGazeboSim/right_leg/analog:o</port>
+		<port>/icubGazeboSim/right_foot/analog:o</port>
+		<port>/icubGazeboSim/left_leg/analog:o</port>
+		<port>/icubGazeboSim/left_foot/analog:o</port>
+  		<port>/icubGazeboSim/inertial</port>
+	</dependencies>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/right_leg/state:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-right_leg-state-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/right_leg/state:o</from>
+		<to>/dumper/icubGazeboSim/right_leg/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/left_leg/state:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-left_leg-state-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/left_leg/state:o</from>
+		<to>/dumper/icubGazeboSim/left_leg/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/torso/state:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-torso-state-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/torso/state:o</from>
+		<to>/dumper/icubGazeboSim/torso/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/left_foot_IMU --type bottle </parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-left_foot_IMU</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/left_foot_IMU</from>
+		<to>/dumper/icubGazeboSim/left_foot_IMU</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/left_foot/analog:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-left_foot-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/left_foot/analog:o</from>
+		<to>/dumper/icubGazeboSim/left_foot/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/right_foot_IMU --type bottle </parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-right_foot_IMU</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/right_foot_IMU</from>
+		<to>/dumper/icubGazeboSim/right_foot_IMU</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/right_foot/analog:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-right_foot-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/right_foot/analog:o</from>
+		<to>/dumper/icubGazeboSim/right_foot/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+
+
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/right_leg/analog:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-right_leg-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/right_leg/analog:o</from>
+		<to>/dumper/icubGazeboSim/right_leg/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/left_leg/analog:o --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-left_leg-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/left_leg/analog:o</from>
+		<to>/dumper/icubGazeboSim/left_leg/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icubGazeboSim/inertial --type bottle</parameters>
+		<node>localhost</node>
+		<tag>data-dumper-icubGazeboSim-inertial</tag>
+	</module>
+	<connection>
+		<from>/icubGazeboSim/inertial</from>
+		<to>/dumper/icubGazeboSim/inertial</to>
+		<protocol>udp</protocol>
+	</connection>
+	
+</application>
+
