@@ -1,0 +1,114 @@
+<application>
+	<name>tippingExperiments</name>
+	<dependencies>
+		<port>/icub/torso/state:o</port>
+		<port>/icub/right_leg/state:o</port>
+		<port>/icub/left_leg/state:o</port>
+		<port>/icub/right_leg/analog:o</port>
+		<port>/icub/left_leg/analog:o</port>
+		<port>/icub/right_foot/analog:o</port>
+		<port>/icub/left_foot/analog:o</port>
+		<port>/icub/right_leg/inertialMTB</port>
+		<port>/icub/skin/right_foot</port>
+	</dependencies>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/torso/state:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-torso-state-o</tag>
+	</module>
+	<connection>
+		<from>/icub/torso/state:o</from>
+		<to>/dumper/icub/torso/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/right_leg/state:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-right_leg-state-o</tag>
+	</module>
+	<connection>
+		<from>/icub/right_leg/state:o</from>
+		<to>/dumper/icub/right_leg/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/left_leg/state:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-left_leg-state-o</tag>
+	</module>
+	<connection>
+		<from>/icub/left_leg/state:o</from>
+		<to>/dumper/icub/left_leg/state:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/right_leg/analog:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-right_leg-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icub/right_leg/analog:o</from>
+		<to>/dumper/icub/right_leg/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/left_leg/analog:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-left_leg-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icub/left_leg/analog:o</from>
+		<to>/dumper/icub/left_leg/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/right_foot/analog:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-right_foot-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icub/right_foot/analog:o</from>
+		<to>/dumper/icub/right_foot/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/left_foot/analog:o --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-left_foot-analog-o</tag>
+	</module>
+	<connection>
+		<from>/icub/left_foot/analog:o</from>
+		<to>/dumper/icub/left_foot/analog:o</to>
+		<protocol>udp</protocol>
+	</connection>
+	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/right_leg/inertialMTB --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-right_leg-inertialMTB</tag>
+	</module>
+	<connection>
+		<from>/icub/right_leg/inertialMTB</from>
+		<to>/dumper/icub/right_leg/inertialMTB</to>
+		<protocol>udp</protocol>
+	</connection>
+<!--	<module>
+		<name>yarpdatadumper</name>
+		<parameters>--name /dumper/icub/skin/right_foot --type bottle </parameters>
+		<node>icub14</node>
+		<tag>data-dumper-icub-skin-right_foot</tag>
+	</module>
+	<connection>
+		<from>/icub/skin/right_foot</from>
+		<to>/dumper/icub/skin/right_foot</to>
+		<protocol>udp</protocol>
+	</connection>-->
+</application>
+
